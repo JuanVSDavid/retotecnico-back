@@ -1,7 +1,7 @@
 # Back
 Diseñe una API RESTful, con diferentes entidades para el manejo de persistencia y envio de los datos.
 El Back ya tiene vinculada una base de datos en la nuebe (MySql), en el caso de que se borren los datos de esta,
-dejo la estrctura de los JSON, para hacer peticiones post para persistir en la base de datos:
+dejo la estructura de los JSON, para hacer peticiones post para persistir en la base de datos de manera local:
 
 End-point: http://localhost:8080/api/savePregunta
 
@@ -18,6 +18,14 @@ End-point: http://localhost:8080/api/savePregunta
     "answer": "China"
   }
 }
+
+# aplication.properties de forma local
+Para acceder al archivo, tienen que entrar a src/main/java/com/sofkat/api/resources
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/db_example
+spring.datasource.username=springuser
+spring.datasource.password=ThePassword
 
 La API RESTful manda preguntas aleatorias respecto a los niveles de complejidad:
 "facil, normal, intermedio, dificil y super" En el caso de hacer peticiones POST al endpoint,
