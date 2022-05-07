@@ -22,7 +22,7 @@ public class IPreguntaService implements preguntaService {
     public List<pregunta> getPreguntas() {
         List<pregunta> list = new ArrayList<pregunta>();
         String[] level = {"facil", "normal", "intermedio", "dificil", "super"};
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             list.add(pr.getQuestion(level[i]));
         }
         return list;
